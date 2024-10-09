@@ -1,0 +1,116 @@
+h1{
+    color:#ff0000;
+}
+p{
+    color:#991cf3;
+}
+h2{
+    color: rgb(97, 178, 248);
+}
+ul{
+    color: #f6fa09;
+}
+
+body {
+    background-image: url('https://i0.wp.com/www.themoviedb.org/t/p/w1280/tAwfoDyKiYa4KQdUp3DTMrEs4En.jpg');
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111; /* Fondo oscuro para resaltar la barra */
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: #ff0000; /* Rojo representando a los Autobots */
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Logo del lado izquierdo */
+.navbar .logo img {
+    height: 60px; /* Ajusta el tamaño del logo */
+}
+
+/* Enlaces de la barra de navegación */
+.navbar a {
+    color: #ffffff; /* Blanco para el texto de los enlaces */
+    text-align: center;
+    padding: 20px 25px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.4s ease-in-out;
+}
+
+/* Efecto hover en las letras */
+.navbar a:hover {
+    color: #4b0082; /* Morado representando a los Decepticons */
+}
+
+/* Estilo de fondo en el hover */
+.navbar a:hover:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.3); /* Fondo claro en hover */
+    transition: width 0.4s ease-in-out;
+    z-index: -1;
+}
+
+.navbar a:hover:before {
+    width: 100%;
+}
+
+/* Icono de menú para pantallas pequeñas */
+.navbar a.icon {
+    display: none;
+}
+
+/* Responsive: para pantallas de hasta 768px */
+@media screen and (max-width: 768px) {
+    .navbar a {
+        display: none;
+    }
+    .navbar a.icon {
+        display: block;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+    }
+}
+
+/* Cambia la barra cuando está en estado responsive */
+.navbar.responsive a {
+    display: block;
+    text-align: left;
+}
+
+.navbar.responsive {
+    height: auto;
+}
+
+.navbar .navbar-links {
+    display: flex;
+    gap: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar .navbar-links {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 10px;
+    }
+    .navbar.responsive .navbar-links {
+        display: flex;
+    }
+}
